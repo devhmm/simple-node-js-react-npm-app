@@ -12,6 +12,7 @@ pipeline {
         stage('env') {
             steps {
                 sh 'id'
+                sh 'npm -v'
             }
         }
         stage('Build') {
