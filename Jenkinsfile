@@ -12,13 +12,11 @@ pipeline {
         stage('env') {
             steps {
                 sh 'id'
-                sh 'whoami'
-                sh 'pwd'
             }
         }
         stage('Build') {
             steps {
-                sh 'npm install'
+                sh '/usr/local/bin/npm install'
             }
         }
         stage('Test') {
