@@ -3,10 +3,12 @@ pipeline {
         docker {
             image 'node:10.16.3'
             args '-p 3000:3000'
+            args '-u 0:0'
         }
     }
     environment {
         CI = 'true'
+        HOME="."
     }
     stages {
         stage('env') {
