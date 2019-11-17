@@ -10,9 +10,8 @@ pipeline {
         HOME="."
     }
     stages {
-        stage('Check Environment') {
+        stage('Check ENV') {
             steps {
-                sh 'id'
                 sh 'npm -v'
             }
         }
